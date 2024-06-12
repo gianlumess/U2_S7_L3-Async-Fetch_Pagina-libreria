@@ -27,6 +27,7 @@ const fetchBooks = () => {
 
         const img = document.createElement("img");
         img.classList.add("card-img-top");
+        img.classList.add("img-thumbnail");
         img.src = book.img;
         img.alt = book.title;
 
@@ -44,7 +45,6 @@ const fetchBooks = () => {
         const button = document.createElement("a");
         button.classList.add("btn");
         button.classList.add("btn-primary");
-        button.href = "#";
         button.innerText = "Scarta";
         button.addEventListener("click", () => {
           col.remove();
