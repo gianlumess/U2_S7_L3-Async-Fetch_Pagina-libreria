@@ -27,7 +27,6 @@ const fetchBooks = () => {
 
         const img = document.createElement("img");
         img.classList.add("card-img-top");
-        img.classList.add("img-thumbnail");
         img.src = book.img;
         img.alt = book.title;
 
