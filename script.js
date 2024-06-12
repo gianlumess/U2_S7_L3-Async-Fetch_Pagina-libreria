@@ -41,17 +41,24 @@ const fetchBooks = () => {
         cardText.classList.add("card-text");
         cardText.innerText = `${book.price} €`;
 
-        const button = document.createElement("a");
-        button.classList.add("btn");
-        button.classList.add("btn-primary");
-        button.innerText = "Scarta";
-        button.addEventListener("click", () => {
+        const buttonscarta = document.createElement("a");
+        buttonscarta.classList.add("btn");
+        buttonscarta.classList.add("btn-danger");
+        buttonscarta.innerText = "Scarta";
+        buttonscarta.addEventListener("click", () => {
           col.remove();
         });
 
+        const buttonCart = document.createElement("a");
+        buttonCart.classList.add("btn");
+        buttonCart.classList.add("btn-success");
+        buttonCart.classList.add("ms-1");
+        buttonCart.innerText = "Compra ora";
+
         cardBody.appendChild(cardTitle);
         cardBody.appendChild(cardText);
-        cardBody.appendChild(button);
+        cardBody.appendChild(buttonscarta);
+        cardBody.appendChild(buttonCart);
 
         card.appendChild(img);
         card.appendChild(cardBody);
